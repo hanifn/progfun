@@ -18,3 +18,10 @@ class Nil[T] extends List[T] {
   def head = throw new NoSuchElementException("Nil.head")
   def tail = throw new NoSuchElementException("Nil.tail")
 }
+
+object List {
+  def apply[T]: List[T] = new Nil
+  def apply[T](a: T): List[T] = new Cons(a, new Nil)
+  def apply[T](a: T, b: T): List[T] = new Cons(a, new Cons(b, new Nil))
+  def apply[T](a: T, b: T, c: T): List[T] = new Cons(a, new Cons(b, new Cons(c, new Nil)))
+}
