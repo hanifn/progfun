@@ -12,3 +12,5 @@ nth(4, list)
 nth(-1, list)
 
 List(1)
+
+val x: List[String] = Nil
